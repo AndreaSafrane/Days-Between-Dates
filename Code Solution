@@ -1,0 +1,19 @@
+#Input Format
+#Two strings that represent the dates, first date should be the older date. 
+#Date format: Month DD, YYYY
+
+#Output Format 
+#A number representing the number of days between the two dates.
+
+from datetime import datetime
+
+date1 = input()
+
+date2 = input()
+
+past = datetime.strptime(date1, "%B %d, %Y")
+present = datetime.strptime(date2, "%B %d, %Y")
+
+delta = present - past
+
+print(delta.days)
